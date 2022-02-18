@@ -8,7 +8,7 @@ namespace space_age {
         
         public:
             space_age(int seconds){seconds_ = seconds;};
-            float seconds() const {return seconds_;};
+            float seconds() const {return seconds_;}; 
     };
 }  // namespace space_age
 
