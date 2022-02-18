@@ -4,6 +4,11 @@ namespace triangle {
 
     flavor kind(int side1, int side2, int side3)
     {
+        return kind(double(side1),double(side2),double(side3));
+    };
+
+    flavor kind(double side1, double side2, double side3)
+    {
         if(side1 == side2 and side2 == side3){
             return flavor::equilateral;
         }
