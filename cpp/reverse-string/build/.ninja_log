@@ -1,9 +1,0 @@
-# ninja log v5
-1	590	1645177666288971638	CMakeFiles/reverse-string.dir/reverse_string.cpp.o	39fea8bd35705967
-4	2632	1645177828956479889	CMakeFiles/reverse-string.dir/reverse_string_test.cpp.o	a88cc575967e5208
-1	6093	1645177671772064773	CMakeFiles/reverse-string.dir/test/tests-main.cpp.o	74a79c008439f7b0
-2632	3022	1645177829339066418	reverse-string	518d94ac816f2453
-3022	3217	0	CMakeFiles/test_reverse-string	53416c1e72427a6
-3022	3217	0	/Users/keir-bowater/Exercism/cpp/reverse-string/build/CMakeFiles/test_reverse-string	53416c1e72427a6
-4	805	1645178615826580048	CMakeFiles/reverse-string.dir/reverse_string.cpp.o	39fea8bd35705967
-805	1038	1645178616050645298	reverse-string	518d94ac816f2453
