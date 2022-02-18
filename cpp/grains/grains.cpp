@@ -10,7 +10,8 @@ namespace grains {
     {
         unsigned long long result = 1;
         while(i > 0){
-            result *= result;
+            result *= 2;
+            --i;
         }
         
         return result;
