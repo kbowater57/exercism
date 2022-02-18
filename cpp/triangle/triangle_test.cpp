@@ -55,12 +55,12 @@ TEST_CASE("very_small_triangles_are_legal")
 {
     REQUIRE(triangle::flavor::scalene == triangle::kind(0.4, 0.6, 0.3));
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("triangles_with_no_size_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(0, 0, 0), std::domain_error);
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("triangles_with_negative_sides_are_illegal")
 {
