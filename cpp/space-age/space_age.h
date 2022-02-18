@@ -4,11 +4,22 @@
 namespace space_age {
     class space_age{
         private:
-            int seconds_{};
+            float seconds_{};
+            // const float mercury_year = 0.2408467;
+            // const float venus_year = 0.61519726;
+            // const float earth_year = 1.0;
+            // const float mars_year = 1.8808158;
+            // const float jupiter_year = 11.862615;
+            // const float saturn_year = 29.447498;
+            // const float uranus_year = 84.016846;
+            // const float neptune_year = 164.79132;
+
+            const float earth_year_in_seconds = 31557600;
         
         public:
-            space_age(int seconds){seconds_ = seconds;};
+            space_age(float seconds){seconds_ = seconds;};
             float seconds() const {return seconds_;}; 
+            float on_earth() const;
     };
 }  // namespace space_age
 
