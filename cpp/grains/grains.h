@@ -4,6 +4,7 @@
 namespace grains {
     unsigned long long square(int square);
     unsigned long long two_factorial(int i);
+    unsigned long long total();
 }  // namespace grains
 
 #endif // GRAINS_H

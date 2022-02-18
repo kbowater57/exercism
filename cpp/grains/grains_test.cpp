@@ -39,10 +39,10 @@ TEST_CASE("square_64")
 {
     REQUIRE(9223372036854775808ULL == grains::square(64));
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("total")
 {
     REQUIRE(18446744073709551615ULL == grains::total());
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif

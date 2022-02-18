@@ -16,4 +16,18 @@ namespace grains {
         
         return result;
     }
+
+    unsigned long long total()
+    {
+        unsigned long long result = 0;
+        int day = 1;
+        while( day < 65)
+        {
+            result += square(day);
+            ++day;
+        }
+        
+
+        return result;
+    }
 }  // namespace grains
