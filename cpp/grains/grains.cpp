@@ -3,10 +3,10 @@
 namespace grains {
     unsigned long long square(int square)
     {
-        return two_factorial(square - 1 );
+        return power_of_2(square - 1 );
     }
 
-    unsigned long long two_factorial(int i)
+    unsigned long long power_of_2(int i)
     {
         unsigned long long result = 1;
         while(i > 0){
@@ -19,15 +19,6 @@ namespace grains {
 
     unsigned long long total()
     {
-        unsigned long long result = 0;
-        int day = 1;
-        while( day < 65)
-        {
-            result += square(day);
-            ++day;
-        }
-        
-
-        return result;
+        return 2*(power_of_2(no_of_days)-1)+1;
     }
 }  // namespace grains
