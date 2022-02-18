@@ -15,6 +15,11 @@ namespace triangle {
         return kind(double(side1),double(side2),double(side3));
     };
 
+    flavor kind(double side1, int side2, int side3)
+    {
+        return kind(double(side1),double(side2),double(side3));
+    };
+
     flavor kind(double side1, double side2, double side3)
     {
         if(side1 < 0 or side2 < 0 or side3 < 0)
