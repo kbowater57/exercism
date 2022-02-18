@@ -12,7 +12,7 @@ TEST_CASE("age_in_seconds")
     REQUIRE(age.seconds() == 1000000);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
+
 namespace
 {
 const double accuracy = 0.005;
@@ -26,6 +26,7 @@ TEST_CASE("age_in_earth_years")
     // numbers.
     REQUIRE(age.on_earth() == Approx(31.69).margin(accuracy));
 }
+
 
 TEST_CASE("age_in_mercury_years")
 {
@@ -82,4 +83,5 @@ TEST_CASE("age_in_neptune_year")
     REQUIRE(age.on_earth() == Approx(260.16).margin(accuracy));
     REQUIRE(age.on_neptune() == Approx(1.58).margin(accuracy));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
