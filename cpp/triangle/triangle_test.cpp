@@ -65,12 +65,12 @@ TEST_CASE("triangles_with_negative_sides_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(3, 4, -5), std::domain_error);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("triangles_violating_triangle_inequality_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(1, 1, 3), std::domain_error);
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("larger_triangles_violating_triangle_inequality_are_illegal")
 {
