@@ -35,7 +35,6 @@ TEST_CASE("isosceles_triangles_have_in_fact_exactly_two_sides_equal")
 {
     REQUIRE(triangle::flavor::isosceles == triangle::kind(10, 10, 2));
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("scalene_triangles_have_no_equal_sides")
 {
@@ -51,6 +50,7 @@ TEST_CASE("scalene_triangles_have_no_equal_sides_in_descending_order_either")
 {
     REQUIRE(triangle::flavor::scalene == triangle::kind(5, 4, 2));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("very_small_triangles_are_legal")
 {

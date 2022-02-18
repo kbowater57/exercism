@@ -7,6 +7,7 @@ namespace triangle {
     {
         equilateral,
         isosceles,
+        scalene,
         other
     };
 
