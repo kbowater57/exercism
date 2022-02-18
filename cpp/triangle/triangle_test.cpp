@@ -70,12 +70,12 @@ TEST_CASE("triangles_violating_triangle_inequality_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(1, 1, 3), std::domain_error);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("larger_triangles_violating_triangle_inequality_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(7, 3, 2), std::domain_error);
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("double_and_integer_arguments")
 {
