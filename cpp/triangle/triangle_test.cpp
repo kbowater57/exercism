@@ -15,7 +15,6 @@ TEST_CASE("larger_equilateral_triangles_also_have_equal_sides")
 {
     REQUIRE(triangle::flavor::equilateral == triangle::kind(10, 10, 10));
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("isosceles_triangles_have_last_two_sides_equal")
 {
@@ -31,6 +30,7 @@ TEST_CASE("isosceles_triangles_have_first_two_sides_equal")
 {
     REQUIRE(triangle::flavor::isosceles == triangle::kind(4, 4, 3));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("isosceles_triangles_have_in_fact_exactly_two_sides_equal")
 {
