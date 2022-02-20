@@ -16,6 +16,6 @@ namespace pangram {
                 return false;
             }
         }
-            return true;
+        return true;
     }
 }  // namespace pangram
