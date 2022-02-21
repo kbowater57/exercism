@@ -14,6 +14,12 @@ namespace grade_school {
     void school::add(const std::string name, const int grade)
     {
         roster_[grade].push_back(name);
+        std::sort(roster_[grade].begin(), roster_[grade].end());
+    }
+
+    std::vector<std::string> school::grade (const int grade)
+    {
+        return roster_[grade];
     }
 
 }  // namespace grade_school
