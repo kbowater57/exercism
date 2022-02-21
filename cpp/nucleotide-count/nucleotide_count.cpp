@@ -17,4 +17,9 @@ namespace nucleotide_count {
     {
         return  counts_;
     }
+
+    int counter::count(const char ch) const
+    {
+        return counts_.at(ch);
+    }
 }  // namespace nucleotide_count
