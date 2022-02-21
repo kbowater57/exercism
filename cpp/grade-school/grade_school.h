@@ -13,7 +13,10 @@ namespace grade_school {
 
         public:
             std::map<int, std::vector<std::string>> roster() const;
+
             school(std::map<int, std::vector<std::string>> roster = {}){roster_ = roster;};
+
+            void add(const std::string name, const int grade);
         
 
     };

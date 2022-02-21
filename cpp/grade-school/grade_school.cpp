@@ -11,4 +11,9 @@ namespace grade_school {
         return school::roster_;
     }
 
+    void school::add(const std::string name, const int grade)
+    {
+        roster_[grade].push_back(name);
+    }
+
 }  // namespace grade_school
