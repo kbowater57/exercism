@@ -17,9 +17,13 @@ namespace grade_school {
         std::sort(roster_[grade].begin(), roster_[grade].end());
     }
 
-    std::vector<std::string> school::grade (const int grade)
+    std::vector<std::string> school::grade (const int grade) const
     {
-        return roster_[grade];
+        if(!roster_.count(grade)) // check if grade doesn't exist in roster
+        {
+            return {};
+        }
+        return roster_.at(grade);
     }
 
 }  // namespace grade_school
