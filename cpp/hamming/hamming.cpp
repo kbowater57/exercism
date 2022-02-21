@@ -7,6 +7,12 @@ namespace hamming {
         {
             return 0;
         }
-        return {};
+
+        int result = 0;
+        for(unsigned int i = 0 ; i < s1.length() ; ++i)
+        {
+            result += s1[i] != s2[i];
+        }
+        return result;
     }
 }  // namespace hamming
