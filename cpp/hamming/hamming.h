@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include <cmath>
+#include <stdexcept>
 
 namespace hamming {
     int compute(std::string s1, std::string s2);

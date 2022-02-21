@@ -3,6 +3,9 @@
 namespace hamming {
     int compute(std::string s1, std::string s2)
     {
+        if(s1.length() != s2.length()){
+            throw std::domain_error("Your strands are different lengths!");
+        }
         if(s1 == s2)
         {
             return 0;
