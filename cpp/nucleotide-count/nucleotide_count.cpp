@@ -3,6 +3,10 @@
 namespace nucleotide_count {
     counter::counter(std::string strand)
     {   
+        if( strand.find_first_not_of("ATCG") != std::string::npos)
+        {
+            throw std::invalid_argument("That's an invalid nucleotide!");
+        }
         counts_ = {{'A', 0}, {'T', 0}, {'C', 0}, {'G', 0}};
 
         if(strand.length() != 0)
