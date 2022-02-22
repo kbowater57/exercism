@@ -13,7 +13,7 @@ namespace nucleotide_count {
 
         public:
             counter(std::string strand);
-            std::map<char, int> nucleotide_counts() const;
+            std::map<char, signed int> nucleotide_counts() const;
             int count(const char ch) const;
     };
 }  // namespace nucleotide_count
