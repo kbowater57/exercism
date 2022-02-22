@@ -5,15 +5,16 @@ namespace nucleotide_count {
     {   
         counts_ = {{'A', 0}, {'T', 0}, {'C', 0}, {'G', 0}};
 
-        if(strand.length() != 0){
-            for ( const char& ch : "ATCG")
+        if(strand.length() != 0)
+        {
+            for ( auto &pair : counts_)
             {
-                counts_[ch] += std::count(strand.begin(), strand.end(), ch);
+                pair.second = std::count(strand.begin(), strand.end(), pair.first);
             }
         }
     }
 
-    std::map<char, int> counter::nucleotide_counts() const
+    std::map<char, signed int> counter::nucleotide_counts() const
     {
         return  counts_;
     }
