@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <map>
 #include <string>
+#include <stdexcept>
 
 namespace nucleotide_count {
     class counter

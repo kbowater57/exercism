@@ -21,6 +21,10 @@ namespace nucleotide_count {
 
     int counter::count(const char ch) const
     {
+        if( std::string(1,ch).find_first_not_of("ATCG") != std::string::npos)
+        {
+            throw std::invalid_argument("That isn't a nucleotide!");
+        }
         return counts_.at(ch);
     }
 }  // namespace nucleotide_count
