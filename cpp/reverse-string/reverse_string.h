@@ -2,7 +2,7 @@
 #define REVERSE_STRING_H
 
 #include <string>
-#include <iostream>
+#include <algorithm>
 
 namespace reverse_string {
 

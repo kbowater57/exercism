@@ -2,6 +2,7 @@
 #define RNA_TRANSCRIPTION_H
 
 #include <string>
+#include <algorithm>
 
 namespace rna_transcription {
     char to_rna(char nucleotide);

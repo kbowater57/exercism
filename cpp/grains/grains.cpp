@@ -8,7 +8,7 @@ namespace grains {
 
     unsigned long long power_of_2(int i)
     {
-        unsigned long long result = 1;
+        unsigned long long result = 1; //implement bit shift version
         while(i > 0){
             result *= 2;
             --i;
