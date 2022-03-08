@@ -29,4 +29,13 @@ namespace queen_attack {
         return board_string;
     }
 
+    bool chess_board::can_attack() const
+    {
+        if(black_.first == white_.first or black_.second == white_.second)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }  // namespace queen_attack
