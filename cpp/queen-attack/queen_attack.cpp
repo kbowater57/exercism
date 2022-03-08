@@ -35,6 +35,19 @@ namespace queen_attack {
         {
             return true;
         }
+
+        // Find equations of diagonals which black can attack
+        int m1 = 1;
+        int m2 = -1;
+        int c1 = black_.first - m1 * black_.second;
+        int c2 = black_.first - m2 * black_.second;
+
+        if( white_.first - m1*white_.second - c1 == 0 or
+            white_.first - m2*white_.second - c2 == 0)
+        {
+            return true;
+        }
+
         return false;
     }
 
