@@ -3,6 +3,7 @@
 
 #include <utility>
 #include <stdexcept>
+#include <cmath>
 
 namespace nth_prime {
     int nth(int input);

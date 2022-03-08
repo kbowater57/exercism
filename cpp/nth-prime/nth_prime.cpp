@@ -23,11 +23,11 @@ namespace nth_prime {
 
     bool is_prime(int input)
     {
-        for (int i = input - 1 ; i > 1 ; --i)
+
+        for (int i = int(floor(sqrt(input))) ; i > 1 ; --i)
         {
             if (input % i == 0)
             {
-                // std::cout << i << '\n';
                 return false;
             }
         }
@@ -35,6 +35,3 @@ namespace nth_prime {
     }
 }  // namespace nth_prime
 
-// int main (){
-//     std::cout << nth_prime::is_prime(3);
-// }
