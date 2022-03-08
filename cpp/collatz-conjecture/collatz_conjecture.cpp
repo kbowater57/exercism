@@ -3,6 +3,8 @@
 namespace collatz_conjecture {
     unsigned steps (unsigned int input)
     {
+        if (input < 1){ throw std::domain_error("Invalid input");}
+
         unsigned steps = 0;
         while (input != 1)
         {
@@ -11,5 +13,11 @@ namespace collatz_conjecture {
             ++steps;
         }
         return steps;
+    }
+
+    unsigned steps (int input){
+        if (input < 1){ throw std::domain_error("Invalid input");}
+
+        return steps((unsigned int)input);
     }
 }  // namespace collatz_conjecture
