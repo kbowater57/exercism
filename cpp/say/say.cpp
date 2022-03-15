@@ -23,7 +23,7 @@ namespace say {
             {
                 return three_digits(number/1e6) + " million";
             }
-            return three_digits(number/1e3) + " thousand " + three_digits(number % 1000);
+            return three_digits(number/1e6) + " million " + three_digits(number % 1000000);
         }
         return "";
 
