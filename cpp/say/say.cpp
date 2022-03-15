@@ -3,40 +3,21 @@
 namespace say {
     std::string in_english(unsigned long long number)
     {
-        if(number < 10)
+        if ( number < 1e3)
         {
-            return units(number);
-        }
-        if (number < 20)
-        {
-            return teens(number);
-        }
-        if (number < 100)
-        {
-            if(number % 10 == 0)
-            {
-                return tens(number/10);
-            }
-            return tens(number/10) + '-' + units(number%10);
+            return three_digits(number);
         }
 
-        if ( number < 1000)
+        if ( number < 1e6)
         {
-            if (number % 100 == 0)
+            if (number % 1000 == 0)
             {
-                return hundreds(number/100);
+                return three_digits(number/1e3) + " thousand";
             }
-            if( (number % 100) % 10 == 0)
-            {
-                return hundreds(number/100) + units((number%100)%10);
-            }
-            if( (number % 100) < 20)
-            {
-                return hundreds(number/100) + teens((number%100)%10);
-            }
-            return hundreds(number/100) + ' ' + tens((number % 100 - (number%100)%10)/10) + '-'+units((number%100)%10);
+            return three_digits(number/1e3) + " thousand " + three_digits(number % 1000);
         }
         return "";
+
     }
 
     std::string units(unsigned long long number)
@@ -114,6 +95,44 @@ namespace say {
     std::string hundreds(unsigned long long number)
     {
         return units(number) + " hundred";
+    }
+
+    std::string three_digits(unsigned long long number)
+    {
+        if(number < 10)
+        {
+            return units(number);
+        }
+        if (number < 20)
+        {
+            return teens(number);
+        }
+        if (number < 100)
+        {
+            if(number % 10 == 0)
+            {
+                return tens(number/10);
+            }
+            return tens(number/10) + '-' + units(number%10);
+        }
+
+        if ( number < 1000)
+        {
+            if (number % 100 == 0)
+            {
+                return hundreds(number/100);
+            }
+            if( (number % 100) % 10 == 0)
+            {
+                return hundreds(number/100) + units((number%100)%10);
+            }
+            if( (number % 100) < 20)
+            {
+                return hundreds(number/100) + teens((number%100)%10);
+            }
+            return hundreds(number/100) + ' ' + tens((number % 100 - (number%100)%10)/10) + '-'+units((number%100)%10);
+        }
+        return "";
     }
 
 

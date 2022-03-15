@@ -9,6 +9,7 @@ namespace say {
     std::string teens(unsigned long long number);
     std::string tens(unsigned long long number);
     std::string hundreds(unsigned long long number);
+    std::string three_digits(unsigned long long number);
 }  // namespace say
 
 #endif // SAY_H
