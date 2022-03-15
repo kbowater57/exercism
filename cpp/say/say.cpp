@@ -7,6 +7,10 @@ namespace say {
         {
             return units(number);
         }
+        if (number < 20)
+        {
+            return teens(number);
+        }
         return "";
     }
 
@@ -37,5 +41,24 @@ namespace say {
         }
         return "";
     }
+
+    std::string teens(unsigned long long number)
+    {
+        switch(number)
+        {
+            case 10:
+                return "ten";
+            case 11:
+                return "eleven";
+            case 12:
+                return "twelve";
+            case 13:
+                return "thirteen";
+            default:
+                return units(number - 10) + "teen";
+        }
+        return "";
+    }
+
 
 }  // namespace say
