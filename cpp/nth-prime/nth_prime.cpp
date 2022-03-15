@@ -1,15 +1,15 @@
 #include "nth_prime.h"
 
 namespace nth_prime {
-    int nth(int input)
+    int nth(int n)
     {
-        if ( input == 0 ){throw std::domain_error("The 0th prime is undefined");}
+        if ( n == 0 ){throw std::domain_error("The 0th prime is undefined");}
         std::pair<int, int> which_prime{2,1};
         // first value is value of most recently found prime
         // second value is which prime this is, i.e. 2 is the first prime
         int candidate_prime = 3;
 
-        while(which_prime.second != input)
+        while(which_prime.second != n)
         {
             if (is_prime(candidate_prime))
             {
