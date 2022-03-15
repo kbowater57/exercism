@@ -4,22 +4,22 @@ namespace nth_prime {
     int nth(int n)
     {
         if ( n == 0 ){throw std::domain_error("The 0th prime is undefined");}
-        std::pair<int, int> which_prime{2,1};
-        // first value is value of most recently found prime
-        // second value is which prime this is, i.e. 2 is the first prime
+        int highest_found_prime = 2;
+        int found_n = 1;
+
         int candidate_prime = 3;
 
-        while(which_prime.second != n)
+        while(found_n != n)
         {
             if (is_prime(candidate_prime))
             {
-                which_prime.first = candidate_prime;
-                ++which_prime.second;
+                highest_found_prime = candidate_prime;
+                ++found_n;
             }
             candidate_prime++;
         }
 
-        return which_prime.first;
+        return highest_found_prime;
     }
 
 
