@@ -19,6 +19,23 @@ namespace say {
             }
             return tens(number/10) + '-' + units(number%10);
         }
+
+        if ( number < 1000)
+        {
+            if (number % 100 == 0)
+            {
+                return hundreds(number/100);
+            }
+            if( (number % 100) % 10 == 0)
+            {
+                return hundreds(number/100) + units((number%100)%10);
+            }
+            if( (number % 100) < 20)
+            {
+                return hundreds(number/100) + teens((number%100)%10);
+            }
+            return hundreds(number/100) + ' ' + tens((number % 100 - (number%100)%10)/10) + '-'+units((number%100)%10);
+        }
         return "";
     }
 
@@ -92,6 +109,11 @@ namespace say {
                 return "";
             
         }
+    }
+
+    std::string hundreds(unsigned long long number)
+    {
+        return units(number) + " hundred";
     }
 
 

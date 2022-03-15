@@ -8,6 +8,7 @@ namespace say {
     std::string units(unsigned long long number);
     std::string teens(unsigned long long number);
     std::string tens(unsigned long long number);
+    std::string hundreds(unsigned long long number);
 }  // namespace say
 
 #endif // SAY_H
