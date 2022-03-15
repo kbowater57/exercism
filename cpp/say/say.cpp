@@ -16,6 +16,15 @@ namespace say {
             }
             return three_digits(number/1e3) + " thousand " + three_digits(number % 1000);
         }
+
+        if ( number < 1e9)
+        {
+            if (number % 1000000 == 0)
+            {
+                return three_digits(number/1e6) + " million";
+            }
+            return three_digits(number/1e3) + " thousand " + three_digits(number % 1000);
+        }
         return "";
 
     }
