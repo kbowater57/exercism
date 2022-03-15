@@ -11,6 +11,14 @@ namespace say {
         {
             return teens(number);
         }
+        if (number < 100)
+        {
+            if(number % 10 == 0)
+            {
+                return tens(number/10);
+            }
+            return tens(number/10) + '-' + units(number%10);
+        }
         return "";
     }
 
@@ -58,6 +66,32 @@ namespace say {
                 return units(number - 10) + "teen";
         }
         return "";
+    }
+
+    std::string tens(unsigned long long number)
+    {
+        switch(number)
+        {
+            case 2:
+                return "twenty";
+            case 3:
+                return "thirty";
+            case 4:
+                return "forty";
+            case 5:
+                return "fifty";
+            case 6:
+                return "sixty";
+            case 7:
+                return "seventy";
+            case 8:
+                return "eighty";
+            case 9:
+                return "ninety";
+            default:
+                return "";
+            
+        }
     }
 
 
