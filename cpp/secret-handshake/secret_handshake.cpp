@@ -11,6 +11,21 @@ namespace secret_handshake {
             {
                 output.push_back("wink");
             }
+
+            if(position == 1 and bit == 1)
+            {
+                output.push_back("double blink");
+            }
+
+            // if(position == 2 and bit == 1)
+            // {
+            //     output.push_back("wink");
+            // }
+
+            // if(position == 3 and bit == 1)
+            // {
+            //     output.push_back("wink");
+            // }
         }
         return output;
     }
