@@ -26,6 +26,12 @@ namespace secret_handshake {
             {
                 output.push_back("jump");
             }
+
+            if(position == 4 and bit == 1)
+            {
+                std::reverse(output.begin(), output.end());
+            }
+
         }
         return output;
     }
