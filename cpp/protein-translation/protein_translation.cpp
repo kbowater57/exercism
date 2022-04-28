@@ -42,7 +42,13 @@ std::map<std::string, std::string> codon_protein_map =
 std::vector<std::string> proteins(std::string rna_sequence)
 {
     std::vector<std::string> output = {};
-    output.push_back(codon_protein_map.at(rna_sequence));
+    std::string current_output = codon_protein_map.at(rna_sequence);
+    if (current_output == "STOP")
+    {
+        return output;
+    }
+    else 
+        output.push_back(current_output);
     return output;
 }
 
