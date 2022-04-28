@@ -39,14 +39,6 @@ std::map<std::string, std::string> codon_protein_map =
     {"STOP"          , "UGA" }
 };
 
-// AUG	Methionine
-// UUU, UUC	Phenylalanine
-// UUA, UUG	Leucine
-// UCU, UCC, UCA, UCG	Serine
-// UAU, UAC	Tyrosine
-// UGU, UGC	Cysteine
-// UGG	Tryptophan
-// UAA, UAG, UGA	STOP
 std::vector<std::string> proteins(std::string rna_sequence)
 {
     std::vector<std::string> output = {};
