@@ -8,29 +8,52 @@ namespace sum_of_multiples {
         return int(0.5 * quotient * (quotient+1) * factor);
     }
 
-    int to(std::list<int> multiples, int limit)
+    int dumb_sum(std::list<int> multiples, int limit)
     {
-        int sum = 0;
-        for(int multiple : multiples)
+        std::set<int> multiple_list;
+        for (int multiple : multiples)
         {
-            sum += sum_of_multiples(multiple, limit);
-        }
-
-        std::set<int> common_multiples;
-        for(int i : multiples)
-        {
-            for(int j : multiples)
+            int factor = 1;
+            while (factor * multiple <= limit - 1)
             {
-                if (i == j) {continue;}
-                int lcm = std::lcm(i,j);
-                if (lcm > limit - 1){continue;}
-                if (common_multiples.find(lcm) == common_multiples.end())
-                {
-                    common_multiples.emplace(lcm);
-                    sum -= sum_of_multiples(lcm, limit);
-                }
+                multiple_list.insert(factor*multiple);
+                ++factor;
             }
+            
+        }
+        int sum = 0;
+        for ( int element : multiple_list)
+        {
+            sum += element;
         }
         return sum;
+
+    }
+
+    int to(std::list<int> multiples, int limit)
+    {
+        return dumb_sum(multiples, limit);
+        // int sum = 0;
+        // for(int multiple : multiples)
+        // {
+        //     sum += sum_of_multiples(multiple, limit);
+        // }
+
+        // std::set<std::pair<int, int> > common_multiples;
+        // for(int i : multiples)
+        // {
+        //     for(int j : multiples)
+        //     {
+        //         if (i == j) {continue;}
+        //         int lcm = std::lcm(i,j);
+        //         if (lcm > limit - 1){continue;}
+        //         if (common_multiples.find(lcm) == common_multiples.end())
+        //         {
+        //             common_multiples.emplace(lcm);
+        //             sum -= sum_of_multiples(lcm, limit);
+        //         }
+        //     }
+        // }
+        // return sum;
     }
 }  // namespace sum_of_multiples
