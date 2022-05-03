@@ -13,6 +13,7 @@ namespace robot_name {
             }
                 
             std::string name () const{return name_;};
+            void reset(){name_ = generate_name();};
 
         private:
             std::string name_;
