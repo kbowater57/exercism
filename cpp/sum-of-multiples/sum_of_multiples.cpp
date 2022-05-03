@@ -22,11 +22,12 @@ namespace sum_of_multiples {
             for(int j : multiples)
             {
                 if (i == j) {continue;}
-                int product = i*j;
-                if (common_multiples.find(product) == common_multiples.end())
+                int lcm = std::lcm(i,j);
+                if (lcm > limit - 1){continue;}
+                if (common_multiples.find(lcm) == common_multiples.end())
                 {
-                    common_multiples.emplace(product);
-                    sum -= sum_of_multiples(product, limit);
+                    common_multiples.emplace(lcm);
+                    sum -= sum_of_multiples(lcm, limit);
                 }
             }
         }
