@@ -43,8 +43,9 @@ namespace date_independent {
         return clock::at(hour_,minute_ + minutes_to_add);
     }
 
-    // std::string plus(int mins_to_add)
-    // {
-    //     int hours ;
-    // }
+    bool clock::operator==(const clock clock2) const
+    {
+        return (hour_ == clock2.hour_ and minute_ == clock2.minute_);
+    }
+
 }  // namespace date_independent

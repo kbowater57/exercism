@@ -20,6 +20,9 @@ namespace date_independent {
 
             clock plus(int minutes_to_add);
 
+            bool operator==(const clock clock2) const;
+            bool operator!=(const clock clock2) const {return !(clock2 == *this);};
+
         private:
             int hour_;
             int minute_;
